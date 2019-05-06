@@ -1,0 +1,115 @@
+body {
+  margin:0;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: #d65a31;
+}
+
+nav {
+  float:right;
+  font-size: 1.3rem;
+}
+
+nav ul {
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 35px;
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: #000;
+}
+main {
+  grid-area: main;
+  padding-right: 8rem;
+  padding-top: 50px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60px 400px auto;
+
+  grid-template-areas:
+      "header"
+      "hero-section"
+      "left-bar"
+      "main"
+      "footer";
+}
+
+.logo {
+  float:left;
+}
+
+.picme {
+  position: absolute;
+  top: 340px;
+  left: 170px;
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+
+}
+
+.hero--section {
+  background-image:url(https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: 1280px 400px;
+  grid-area: hero-section;
+
+}
+
+.left-bar {
+  grid-area: left-bar;
+  padding: 100px 0 0 3rem;
+  /* padding: 1rem 0 0 3rem; */
+}
+
+.hero--section h2 {
+  float:left;
+  padding: 20px 100px;
+}
+
+.hire-btn{
+  float: right;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  background: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-right: 70px;
+}
+
+@media only screen and (min-width:600px) {
+  .grid__container {
+    display: grid;
+    grid-template-columns: 420px auto;
+    grid-template-rows: 60px 400px auto;
+
+    grid-template-areas:
+        "header header"
+        "hero-section hero-section"
+        "left-bar main"
+        "footer footer";
+  }
+}
